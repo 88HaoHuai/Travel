@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
           <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,27 +17,8 @@
 <script>
 	export default {
 		name: 'HomeRecommend',
-    data () {
-      return {
-        recommendList: [{
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1712/95/95f38f28a6ff19cba3.img.jpg_200x200_af967e35.jpg',
-          title: '水奥雪世界',
-          desc: '水奥雪世界，你的世界水奥雪世界，你的世界水奥雪世界，你的世界水奥雪世界，你的世界水奥雪世界，你的世界水奥雪世界，你的世界'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1712/95/95f38f28a6ff19cba3.img.jpg_200x200_af967e35.jpg',
-          title: '水奥雪世界',
-          desc: '水奥雪世界，你的世界水奥雪世界，你的世界水奥雪世界，你的世界水奥雪世界，你的世界水奥雪世界，你的世界水奥雪世界，你的世界'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1712/95/95f38f28a6ff19cba3.img.jpg_200x200_af967e35.jpg',
-          title: '水奥雪世界',
-          desc: '水奥雪世界，你的世界水奥雪世界，你的世界水奥雪世界，你的世界水奥雪世界，你的世界水奥雪世界，你的世界水奥雪世界，你的世界'
-        }]
-      }
+    props: {
+      list: Array
     }
 	}
 </script>
